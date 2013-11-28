@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment Book</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+
+
+<div class = "wrapper">
+     
+      
+      
+      
+      
+       <!-- Start with the service -->
+        <h2>Pick a Service</h2>
+        
+  <input type='radio' class='service' name='service' id='extensions'>
+  <label for='extensions'>Nail Extensions</label><br>
+  
+  <!-- adding a div to add content to later -->
+  <div class='options' id='extensions-options'></div>
+    
+  <input type='radio' class='service' name='service' id='fills'>
+  <label for='fills'>Fills</label><br>
+  
+   <!-- adding a div to add content to later -->
+  <div class='options' id='fills-options'></div>      
+        
+
+  <input type='radio' class='service' name='service' id='manicure'>
+  <label for='manicure'>Manicure</label><br>
+  
+  <!-- adding a div to add content  -->
+   <div class='options' id='manicure-options'></div>     
+              
+  <input type='radio' class='service' name='service' id ='pedicure'>
+  <label for='pedicure'>Pedicure</label><br>
+  
+    <!-- adding a div to add content  -->
+   <div class='options' id='pedicure-options'></div> 
+
+    <!--- adding a dive to show the results -->
+   <div class ='results' id='results'></div>
+
+
+ 
+</div>
+
+
+
+
+<script src="js/appointment-book.js"></script>
+</body>
+</html>
