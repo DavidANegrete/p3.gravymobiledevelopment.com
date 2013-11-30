@@ -10,6 +10,14 @@
     var service;
     var extras;
     var visited=0;
+    var extra;
+
+//declaring prices of services
+    var parafin = 10;
+    var massage = 10;
+    var art     = 15;
+
+
 
 /***
  * Inner clusters of radio buttons.
@@ -52,12 +60,14 @@
                                     '<input type="radio" class="service-type" name="service-type" id="gel_polish">'+
                                     '<label for="gel_polish">Gel Polish</label><br>';
 
-    var add_on_checkbox           = '<input type="checkbox" class = "add-on" name="add-on" id = "parafin">'+
+    var add_on_checkbox           = '<input type="checkbox" class = "add-on" name="add-on" id = "parafin" value="1">'+
                                     '<label for="parafin">Parafin wax</label><br>'+
-                                    '<input type="checkbox" class = "add-on" name="add-on" id = "massage">'+
+                                    '<input type="checkbox" class = "add-on" name="add-on" id = "massage" value="2">'+
                                     '<label for="massage">Massage</label><br>'+
-                                    '<input type="checkbox" class = "add-on" name="add-on" id = "nail-art">'+
-                                    '<label for="nail-art">Nail Art</label><br>';
+                                    '<input type="checkbox" class = "add-on" name="add-on" id = "nail-art" value="3">'+
+                                    '<label for="nail-art">Nail Art</label><br>'
+                                    '<input type="checkbox" class = "add-on" name="add-on" id = "none" value="4">'+
+                                    '<label for="none">None</label><br>';
 
 
 /**
@@ -105,6 +115,7 @@ $('input[name=service]').click(function() {
             if (service == 'Acrylic') {
                 cost    =   50;
                 time    =   60;
+                service = service + ' Extensions';
                 console.log('Acrylic Cost:' + cost);
             }
 
@@ -112,6 +123,7 @@ $('input[name=service]').click(function() {
             else if(service == 'Gel'){
                 cost    =   60;
                 time    =   60;
+                service = service + ' Extensions';
                 console.log('gel Cost:' + cost);
             }
 
@@ -146,6 +158,7 @@ $('input[name=service]').click(function() {
             if (service == 'Acrylic') {
                 cost    =   35;
                 time    =   50;
+                service = service + ' Fills';
                 console.log('Acrylic Cost:' + cost);
             }
 
@@ -153,6 +166,7 @@ $('input[name=service]').click(function() {
             else if(service == 'Gel'){
                 cost    =   45;
                 time    =   50;
+                service = service + ' Fills';
                 console.log('gel Cost:' + cost);
             }
 
@@ -188,6 +202,7 @@ $('input[name=service]').click(function() {
             if (service == 'Regular Polish') {
                 cost    =   25;
                 time    =   30;
+                service = service + ' Manicure';
                 console.log('Regular Polish:' + cost);
             }
 
@@ -195,6 +210,7 @@ $('input[name=service]').click(function() {
             else if(service == 'Gel Polish'){
                 cost    =   35;
                 time    =   45;
+                service = service + ' Manicure';
                 console.log('Gel Polish:' + cost);
             }
 
@@ -218,16 +234,50 @@ $('input[name=service]').click(function() {
 $('#select-service').click(function() {
 
 
-      displayTotal();
 
 
+    $('input[name=add-on]:checked').each(function(){
+        var box = Math.floor($(this).val());
+        if(box == 1){
 
+            //existing cost + parafin cost adding time and 10 mins
+            
+
+            cost = cost + parafin;
+            time = time + 10;
+
+        }
+        else if(box == 2){
+            cost = cost + massage;
+            time = time + 10;
+
+        }
+        else if(box == 3){
+            cost = cost + art;
+            time = time + 15;
+        }
+        else if(box == 4){
+            cost = cost;
+            time = time;
+        }
+
+    });
     addOn();
+    displayTotal();
+
+
 });
 
 function displayTotal(){
-    $('#results').html( service + ': ' + cost + '<br>' +
-        'Time needed: ' + time + 'minutes');
+    //checking to see if add on variable has been set if so will display
+
+        $('#results').html( service + ': ' + cost + '<br>' +
+        'Extras: ' + extra + '<br>' +
+        'Time needed: ' + time + ' minutes');
+
+
+
+
 
 }
 
@@ -236,25 +286,39 @@ function displayTotal(){
 ***/
 
 function addOn(){
-    visited = 1;
+
 
     $('#head').html('Pick Extras');
     $('#display').html(add_on_checkbox);
 
 }
 
+
 $('#back').click(function() {
+    var amount = 0;
+
+   /** $('input[name=add-on]:checked').each(function(){
+      var price = Math.floor($(this).val());
+        if(price == 1){
+
+            //existing cost + parafin cost adding time and 10 mins
+            cost = cost + parafin;
+            time = time + 10;
+
+        }
+        else if(price == 2){
+            cost = cost + massage;
+            time = time + 10;
+
+        }
+        else if(price == 3){
+            cost = cost + art;
+            time = time + 15;
+
+
+        }
+    });
+**/
 
 });
 
-$('input[name=add-on]').change( function() {
-
-    var $input = $( this );
-    if($input.is(":checked")){
-        console.log('Checked');
-    }
-
-
-    //get the label element that comes after this inner radio button
-
-    });

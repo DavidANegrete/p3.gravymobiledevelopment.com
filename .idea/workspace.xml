@@ -26,7 +26,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="-13.076923" vertical-offset="51" max-vertical-offset="799">
+            <state line="14" column="0" selection-start="406" selection-end="406" vertical-scroll-proportion="-7.1923075" vertical-offset="51" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -53,10 +53,11 @@
       <file leaf-file-name="appointment-book.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/appointment-book.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="232" column="0" selection-start="7829" selection-end="7829" vertical-scroll-proportion="0.08534323" vertical-offset="3813" max-vertical-offset="4420">
+            <state line="243" column="3" selection-start="8475" selection-end="8475" vertical-scroll-proportion="0.5768463" vertical-offset="3162" max-vertical-offset="4930">
               <folding>
                 <element signature="e#0#69#0" expanded="false" />
-                <element signature="e#187#232#0" expanded="false" />
+                <element signature="e#302#347#0" expanded="false" />
+                <element signature="e#4135#5257#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -94,10 +95,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1210" />
-    <option name="y" value="35" />
+    <option name="x" value="855" />
+    <option name="y" value="164" />
     <option name="width" value="1250" />
-    <option name="height" value="720" />
+    <option name="height" value="707" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -162,7 +163,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1210" y="35" width="1250" height="720" extended-state="0" />
+    <frame x="855" y="164" width="1250" height="707" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -236,7 +237,8 @@
         <state line="0" column="0" selection-start="0" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
           <folding>
             <element signature="e#0#69#0" expanded="false" />
-            <element signature="e#187#232#0" expanded="false" />
+            <element signature="e#302#347#0" expanded="false" />
+            <element signature="e#4135#5257#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -318,17 +320,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="-13.076923" vertical-offset="51" max-vertical-offset="799">
+        <state line="14" column="0" selection-start="406" selection-end="406" vertical-scroll-proportion="-7.1923075" vertical-offset="51" max-vertical-offset="799">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/appointment-book.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="232" column="0" selection-start="7829" selection-end="7829" vertical-scroll-proportion="0.08534323" vertical-offset="3813" max-vertical-offset="4420">
+        <state line="243" column="3" selection-start="8475" selection-end="8475" vertical-scroll-proportion="0.5768463" vertical-offset="3162" max-vertical-offset="4930">
           <folding>
             <element signature="e#0#69#0" expanded="false" />
-            <element signature="e#187#232#0" expanded="false" />
+            <element signature="e#302#347#0" expanded="false" />
+            <element signature="e#4135#5257#0" expanded="false" />
           </folding>
         </state>
       </provider>
