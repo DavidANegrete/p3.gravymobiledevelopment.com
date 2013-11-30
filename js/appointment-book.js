@@ -12,6 +12,34 @@
 /***
  * Inner clusters of radio buttons.
 ***/
+
+    var main_options            =       '<input type="radio" class="service" name="service" id="extensions">'+
+                                        '<label for="extensions">Nail Extensions</label><br>'+
+
+                                            <!-- adding a div to add content to later -->
+                                        '<div class="options" id="extensions-options"></div>'+
+
+                                        '<input type="radio" class="service" name="service" id="fills">'+
+                                        '<label for="fills">Fills</label><br>'+
+
+                                            <!-- adding a div to add content to later -->
+                                        '<div class="options" id="fills-options"></div>'+
+
+                                        '<input type="radio" class="service" name="service" id="manicure">'+
+                                        '<label for="manicure">Manicure</label><br>'+
+
+                                        <!-- adding a div to add content  -->
+                                        '<div class="options" id="manicure-options"></div>'+
+
+                                        '<input type="radio" class="service" name="service" id ="pedicure">'+
+                                        '<label for="pedicure">Pedicure</label><br>'+
+
+                                        <!-- adding a div to add content  -->
+                                        '<div class="options" id="pedicure-options"></div>';
+
+
+
+
 	var extensions_fills_sub    =   '<input type="radio" class="service-type" name="service-type" id="acrylic">'+
                                     '<label for="acrylic">Acrylic</label><br>'+
                                     '<input type="radio" class="service-type" name="service-type" id="gel">'+
@@ -21,6 +49,13 @@
                                     '<label for="regular_polish">Regular Polish</label><br>'+
                                     '<input type="radio" class="service-type" name="service-type" id="gel_polish">'+
                                     '<label for="gel_polish">Gel Polish</label><br>';
+
+/**
+ * displaying the main options
+ */
+
+$('#display').html(main_options);
+
 
 /***
 * Click listener for the initial radio button UI. The termination of the UI will result in the cost
@@ -167,12 +202,58 @@ $('input[name=service]').click(function() {
 }); 
 //EO main options
 
-/***
- * Function that will be used to calculate the cost and amount of time needed for a service.
- **/
-function calculate(){
 
-    $('#results').html(manicure_sub)
+
+
+
+
+
+
+
+
+/***
+ * Function that will be used to calculate the cost and amount of time needed for a service and time needed.
+ **/
+
+$('#select-service').click(function() {
+
+
+    $('#results').html( service + ': ' + cost + '<br>' +
+                        'Time needed: ' + time + 'minutes');
+
+    addOn();
+
+
+
+
+
+
+});
+
+
+function addOn(){
+    $('#display').html('');
+
 
 
 }
+
+
+/***
+*Function that will show main menu and set everything to 0
+***/
+
+$('#back').click(function() {
+
+
+
+
+
+
+
+
+
+
+
+
+});
