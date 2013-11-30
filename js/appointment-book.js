@@ -8,6 +8,8 @@
 	var time=0;
     var label;
     var service;
+    var extras;
+    var visited=0;
 
 /***
  * Inner clusters of radio buttons.
@@ -50,12 +52,19 @@
                                     '<input type="radio" class="service-type" name="service-type" id="gel_polish">'+
                                     '<label for="gel_polish">Gel Polish</label><br>';
 
+    var add_on_checkbox           = '<input type="checkbox" class = "add-on" name="add-on" id = "parafin">'+
+                                    '<label for="parafin">Parafin wax</label><br>'+
+                                    '<input type="checkbox" class = "add-on" name="add-on" id = "massage">'+
+                                    '<label for="massage">Massage</label><br>'+
+                                    '<input type="checkbox" class = "add-on" name="add-on" id = "nail-art">'+
+                                    '<label for="nail-art">Nail Art</label><br>';
+
+
 /**
  * displaying the main options
  */
-
+$('#head').html('Pick a Service');
 $('#display').html(main_options);
-
 
 /***
 * Click listener for the initial radio button UI. The termination of the UI will result in the cost
@@ -150,7 +159,7 @@ $('input[name=service]').click(function() {
         });
 
 			
-		console.log(label);
+
 	}
 
     //Can be regular polish (cost = 35, time = 30) or gel polish (cost = 35, time = 45).
@@ -202,58 +211,50 @@ $('input[name=service]').click(function() {
 }); 
 //EO main options
 
-
-
-
-
-
-
-
-
-
 /***
- * Function that will be used to calculate the cost and amount of time needed for a service and time needed.
+ * Click listener for for the select button.
  **/
 
 $('#select-service').click(function() {
 
 
-    $('#results').html( service + ': ' + cost + '<br>' +
-                        'Time needed: ' + time + 'minutes');
+      displayTotal();
+
+
 
     addOn();
-
-
-
-
-
-
 });
 
-
-function addOn(){
-    $('#display').html('');
-
-
+function displayTotal(){
+    $('#results').html( service + ': ' + cost + '<br>' +
+        'Time needed: ' + time + 'minutes');
 
 }
 
-
 /***
-*Function that will show main menu and set everything to 0
+*This function changes the heading and also displays new HTML in the display area
 ***/
+
+function addOn(){
+    visited = 1;
+
+    $('#head').html('Pick Extras');
+    $('#display').html(add_on_checkbox);
+
+}
 
 $('#back').click(function() {
 
-
-
-
-
-
-
-
-
-
-
-
 });
+
+$('input[name=add-on]').change( function() {
+
+    var $input = $( this );
+    if($input.is(":checked")){
+        console.log('Checked');
+    }
+
+
+    //get the label element that comes after this inner radio button
+
+    });

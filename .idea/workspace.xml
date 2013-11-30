@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="23" selection-start="430" selection-end="430" vertical-scroll-proportion="0.47574627" vertical-offset="0" max-vertical-offset="799">
+            <state line="23" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="-13.076923" vertical-offset="51" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="hours.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hours.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="-2.0" vertical-offset="135" max-vertical-offset="901">
+            <state line="11" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="901">
               <folding />
             </state>
           </provider>
@@ -46,6 +46,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="0" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="119">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appointment-book.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/appointment-book.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="232" column="0" selection-start="7829" selection-end="7829" vertical-scroll-proportion="0.08534323" vertical-offset="3813" max-vertical-offset="4420">
+              <folding>
+                <element signature="e#0#69#0" expanded="false" />
+                <element signature="e#187#232#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,17 +85,17 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/hours.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/appointment-book.js" />
         <option value="$USER_HOME$/AppData/Local/Temp/index.html" />
         <option value="$USER_HOME$/AppData/Local/Temp/card-o-matic.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/appointment-book.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="546" />
-    <option name="y" value="23" />
+    <option name="x" value="1210" />
+    <option name="y" value="35" />
     <option name="width" value="1250" />
     <option name="height" value="720" />
   </component>
@@ -150,7 +162,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="546" y="23" width="1250" height="720" extended-state="0" />
+    <frame x="1210" y="35" width="1250" height="720" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -188,9 +200,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24068071" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -222,7 +234,10 @@
     <entry file="file://$PROJECT_DIR$/js/appointment-book.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-          <folding />
+          <folding>
+            <element signature="e#0#69#0" expanded="false" />
+            <element signature="e#187#232#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -287,13 +302,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/appointment-book.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="232" column="0" selection-start="7249" selection-end="7249" vertical-scroll-proportion="0.03202847" vertical-offset="3926" max-vertical-offset="4488">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.09514926" vertical-offset="0" max-vertical-offset="1173">
@@ -303,15 +311,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hours.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="-2.0" vertical-offset="135" max-vertical-offset="901">
+        <state line="11" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="901">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="23" selection-start="430" selection-end="430" vertical-scroll-proportion="0.47574627" vertical-offset="0" max-vertical-offset="799">
+        <state line="23" column="0" selection-start="505" selection-end="505" vertical-scroll-proportion="-13.076923" vertical-offset="51" max-vertical-offset="799">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/appointment-book.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="232" column="0" selection-start="7829" selection-end="7829" vertical-scroll-proportion="0.08534323" vertical-offset="3813" max-vertical-offset="4420">
+          <folding>
+            <element signature="e#0#69#0" expanded="false" />
+            <element signature="e#187#232#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
