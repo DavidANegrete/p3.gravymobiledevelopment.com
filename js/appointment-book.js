@@ -7,10 +7,16 @@
 	var cost=0;
 	var time=0;
     var label;
+    var extra_selected = false;
     var service;
-    var extras;
-    var visited=0;
-    var extra;
+
+    var extras = new Array();
+
+
+
+
+
+
 
 //declaring prices of services
     var parafin = 10;
@@ -60,12 +66,12 @@
                                     '<input type="radio" class="service-type" name="service-type" id="gel_polish">'+
                                     '<label for="gel_polish">Gel Polish</label><br>';
 
-    var add_on_checkbox           = '<input type="checkbox" class = "add-on" name="add-on" id = "parafin" value="1">'+
+    var add_on_checkbox           = '<input type="checkbox" class = "add-on" name="add-on" id = "parafin" value="1" = "50">'+
                                     '<label for="parafin">Parafin wax</label><br>'+
                                     '<input type="checkbox" class = "add-on" name="add-on" id = "massage" value="2">'+
                                     '<label for="massage">Massage</label><br>'+
                                     '<input type="checkbox" class = "add-on" name="add-on" id = "nail-art" value="3">'+
-                                    '<label for="nail-art">Nail Art</label><br>'
+                                    '<label for="nail-art">Nail Art</label><br>'+
                                     '<input type="checkbox" class = "add-on" name="add-on" id = "none" value="4">'+
                                     '<label for="none">None</label><br>';
 
@@ -159,7 +165,6 @@ $('input[name=service]').click(function() {
                 cost    =   35;
                 time    =   50;
                 service = service + ' Fills';
-                console.log('Acrylic Cost:' + cost);
             }
 
             //set cost to 60 for gel and time to 60
@@ -167,7 +172,6 @@ $('input[name=service]').click(function() {
                 cost    =   45;
                 time    =   50;
                 service = service + ' Fills';
-                console.log('gel Cost:' + cost);
             }
 
         });
@@ -203,7 +207,6 @@ $('input[name=service]').click(function() {
                 cost    =   25;
                 time    =   30;
                 service = service + ' Manicure';
-                console.log('Regular Polish:' + cost);
             }
 
             //set cost to 60 for gel and time to 60
@@ -211,7 +214,6 @@ $('input[name=service]').click(function() {
                 cost    =   35;
                 time    =   45;
                 service = service + ' Manicure';
-                console.log('Gel Polish:' + cost);
             }
 
         });
@@ -222,7 +224,7 @@ $('input[name=service]').click(function() {
 	else if(service == 'Pedicure'){
 		time = 45;
 		console.log(time);
-		
+
 	}
 }); 
 //EO main options
@@ -230,40 +232,15 @@ $('input[name=service]').click(function() {
 /***
  * Click listener for for the select button.
  **/
-
+var control= 0;
 $('#select-service').click(function() {
+    if(control==0){
+        addOn();
+        control =1;
+    }
 
-
-
-
-    $('input[name=add-on]:checked').each(function(){
-        var box = Math.floor($(this).val());
-        if(box == 1){
-
-            //existing cost + parafin cost adding time and 10 mins
-            
-
-            cost = cost + parafin;
-            time = time + 10;
-
-        }
-        else if(box == 2){
-            cost = cost + massage;
-            time = time + 10;
-
-        }
-        else if(box == 3){
-            cost = cost + art;
-            time = time + 15;
-        }
-        else if(box == 4){
-            cost = cost;
-            time = time;
-        }
-
-    });
-    addOn();
     displayTotal();
+    checkboxes();
 
 
 });
@@ -271,13 +248,16 @@ $('#select-service').click(function() {
 function displayTotal(){
     //checking to see if add on variable has been set if so will display
 
-        $('#results').html( service + ': ' + cost + '<br>' +
-        'Extras: ' + extra + '<br>' +
-        'Time needed: ' + time + ' minutes');
+    $('#main-service').html( service + ': ' + cost + '<br>');
+
+    if(extra_selected == true){
+     $('#extras').html( 'Extras Selected: ');
 
 
+    }
 
 
+    $('#time').html( 'Time needed' + ': ' + time + ' minutes' + '<br>');
 
 }
 
@@ -290,6 +270,7 @@ function addOn(){
 
     $('#head').html('Pick Extras');
     $('#display').html(add_on_checkbox);
+
 
 }
 
@@ -322,3 +303,33 @@ $('#back').click(function() {
 
 });
 
+/***
+ * Check the boxes
+ ***/
+
+function checkboxes(){
+
+    var checkedBoxes = $('input[name=add-on]:checked');
+
+    for (var i=0; i<checkedBoxes.length; i++)
+    {
+        var box = Math.floor($(checkedBoxes[i]).val());
+        if(box == 1){
+
+            extras[i] = box;
+        }
+        else if(box == 2){
+            extras[i] = box;
+        }
+        else if(box == 3){
+            extras[i] = box;
+        }
+        else if(box == 4){
+            extras[i] = box;
+        }
+    }
+
+    for(var i =0; i< extras.length; i++ ){
+        console.log(extras[i]);
+    }
+}
