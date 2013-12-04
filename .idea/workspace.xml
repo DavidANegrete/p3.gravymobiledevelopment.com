@@ -26,7 +26,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="44" selection-start="561" selection-end="561" vertical-scroll-proportion="-3.5384614" vertical-offset="350" max-vertical-offset="850">
+            <state line="46" column="0" selection-start="1162" selection-end="1162" vertical-scroll-proportion="-10.769231" vertical-offset="502" max-vertical-offset="1003">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="119">
+            <state line="1" column="0" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
               <folding />
             </state>
           </provider>
@@ -53,16 +53,9 @@
       <file leaf-file-name="appointment-book.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/appointment-book.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="277" column="0" selection-start="8744" selection-end="8744" vertical-scroll-proportion="0.49115914" vertical-offset="1450" max-vertical-offset="2346">
+            <state line="245" column="31" selection-start="8051" selection-end="8051" vertical-scroll-proportion="0.50715744" vertical-offset="3883" max-vertical-offset="6069">
               <folding>
-                <element signature="e#321#366#0" expanded="false" />
-                <element signature="e#3574#3765#0" expanded="false" />
-                <element signature="e#3809#7978#0" expanded="false" />
-                <element signature="e#8110#8217#0" expanded="false" />
-                <element signature="n#!!block;n#displayTotal#0" expanded="false" />
-                <element signature="n#!!doc;n#addOn#0" expanded="false" />
-                <element signature="n#!!block;n#addOn#0" expanded="false" />
-                <element signature="e#8772#9285#0" expanded="false" />
+                <element signature="e#434#479#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -71,7 +64,7 @@
       <file leaf-file-name="service.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="22" selection-start="694" selection-end="700" vertical-scroll-proportion="-14.0" vertical-offset="180" max-vertical-offset="884">
+            <state line="33" column="0" selection-start="781" selection-end="781" vertical-scroll-proportion="-9.807693" vertical-offset="306" max-vertical-offset="1003">
               <folding />
             </state>
           </provider>
@@ -89,7 +82,7 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="510">
+            <state line="46" column="0" selection-start="786" selection-end="786" vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="901">
               <folding />
             </state>
           </provider>
@@ -108,23 +101,23 @@
         <option value="$PROJECT_DIR$/css/appointment-book.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/hours.html" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$USER_HOME$/AppData/Local/Temp/index.html" />
         <option value="$USER_HOME$/AppData/Local/Temp/card-o-matic.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/service.html" />
         <option value="$PROJECT_DIR$/js/redo.html" />
         <option value="$PROJECT_DIR$/js/service.js" />
+        <option value="$PROJECT_DIR$/service.html" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/appointment-book.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="443" />
-    <option name="y" value="66" />
-    <option name="width" value="1250" />
-    <option name="height" value="703" />
+    <option name="x" value="301" />
+    <option name="y" value="156" />
+    <option name="width" value="1382" />
+    <option name="height" value="708" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -184,6 +177,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="p3.gravymobiledevelopment.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="p3.gravymobiledevelopment.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -224,16 +231,36 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="443" y="66" width="1250" height="703" extended-state="0" />
+    <frame x="301" y="156" width="1382" height="708" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.239899" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6708861" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2159091" sideWeight="0.6708861" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -317,20 +344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="119">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/card-o-matic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="562" />
@@ -350,16 +363,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hours.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="-2.0" vertical-offset="135" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="22" selection-start="694" selection-end="700" vertical-scroll-proportion="-14.0" vertical-offset="180" max-vertical-offset="884">
+        <state line="33" column="0" selection-start="781" selection-end="781" vertical-scroll-proportion="-9.807693" vertical-offset="306" max-vertical-offset="1003">
           <folding />
         </state>
       </provider>
@@ -371,25 +377,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hours.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="-2.0" vertical-offset="135" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="119">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="786" selection-end="786" vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="44" selection-start="561" selection-end="561" vertical-scroll-proportion="-3.5384614" vertical-offset="350" max-vertical-offset="850">
+        <state line="46" column="0" selection-start="1162" selection-end="1162" vertical-scroll-proportion="-10.769231" vertical-offset="502" max-vertical-offset="1003">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/appointment-book.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="277" column="0" selection-start="8744" selection-end="8744" vertical-scroll-proportion="0.49115914" vertical-offset="1450" max-vertical-offset="2346">
+        <state line="245" column="31" selection-start="8051" selection-end="8051" vertical-scroll-proportion="0.50715744" vertical-offset="3883" max-vertical-offset="6069">
           <folding>
-            <element signature="e#321#366#0" expanded="false" />
-            <element signature="e#3574#3765#0" expanded="false" />
-            <element signature="e#3809#7978#0" expanded="false" />
-            <element signature="e#8110#8217#0" expanded="false" />
-            <element signature="n#!!block;n#displayTotal#0" expanded="false" />
-            <element signature="n#!!doc;n#addOn#0" expanded="false" />
-            <element signature="n#!!block;n#addOn#0" expanded="false" />
-            <element signature="e#8772#9285#0" expanded="false" />
+            <element signature="e#434#479#0" expanded="false" />
           </folding>
         </state>
       </provider>

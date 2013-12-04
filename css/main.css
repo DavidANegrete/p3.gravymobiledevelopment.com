@@ -2,7 +2,7 @@
 General
 -------------------------------------------------------------------------------------------------*/
 * {
-    font-family:impact;
+    font-family:Helvetica, Arial, sans-serif;
     color:#333;
 }
 
@@ -12,7 +12,7 @@ General
 Layout
 -------------------------------------------------------------------------------------------------*/
 .wrapper {
-    margin: 100px 500px;
+    margin: 300px 300px;
 
 
 }
@@ -21,4 +21,27 @@ Layout
     margin: 0 30px;
 
 }
+
+#head {
+    width: 100%;
+    font-weight: bold;
+    background-color: lavender;
+    text-align: center;
+
+}
+
+#results{
+    border: 1px solid #050403;
+
+
+}
+#add-on {
+    padding: 25px;
+
+
+}
+#sub-head {
+    font-weight: bold;
+}
+
 

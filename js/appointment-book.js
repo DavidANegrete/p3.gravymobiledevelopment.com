@@ -18,10 +18,13 @@
 
 
 
-//declaring prices of services
-    var parafin = 10;
-    var massage = 10;
-    var art     = 15;
+//declaring prices/time of extra services
+    var extras_name = new Array("Parafin Wax Treatment","Massage","Nail Art");
+    var extras_cost = new Array(10,10,10);
+    var extras_time = new Array(10,10,20);
+
+
+
 
 
 
@@ -45,19 +48,12 @@
                                         '<label for="manicure">Manicure</label><br>'+
 
                                         <!-- adding a div to add content  -->
-                                        '<div class="options" id="manicure-options"></div>'+
-
-                                        '<input type="radio" class="service" name="service" id ="pedicure">'+
-                                        '<label for="pedicure">Pedicure</label><br>'+
-
-                                        <!-- adding a div to add content  -->
-                                        '<div class="options" id="pedicure-options"></div>';
-
+                                        '<div class="options" id="manicure-options"></div><br>';
 
 
 
 	var extensions_fills_sub    =   '<input type="radio" class="service-type" name="service-type" id="acrylic">'+
-                                    '<label for="acrylic">Acrylic</label><br>'+
+                                    '<label for="acrylic">Acrylic</label>'+
                                     '<input type="radio" class="service-type" name="service-type" id="gel">'+
                                     '<label for="gel">Gel</label><br>';
 
@@ -66,21 +62,22 @@
                                     '<input type="radio" class="service-type" name="service-type" id="gel_polish">'+
                                     '<label for="gel_polish">Gel Polish</label><br>';
 
-    var add_on_checkbox           = '<input type="checkbox" class = "add-on" name="add-on" id = "parafin" value="1" = "50">'+
+    var add_on_checkbox           = '<input type="checkbox" class = "add-on" name="add-on" id = "parafin" value="0" = "50">'+
                                     '<label for="parafin">Parafin wax</label><br>'+
-                                    '<input type="checkbox" class = "add-on" name="add-on" id = "massage" value="2">'+
+                                    '<input type="checkbox" class = "add-on" name="add-on" id = "massage" value="1">'+
                                     '<label for="massage">Massage</label><br>'+
-                                    '<input type="checkbox" class = "add-on" name="add-on" id = "nail-art" value="3">'+
+                                    '<input type="checkbox" class = "add-on" name="add-on" id = "nail-art" value="2">'+
                                     '<label for="nail-art">Nail Art</label><br>'+
-                                    '<input type="checkbox" class = "add-on" name="add-on" id = "none" value="4">'+
-                                    '<label for="none">None</label><br>';
+                                    '<input type="checkbox" class = "add-on" name="add-on" id = "none" value="3">'+
+                                    '<label for="none">None</label><br><br>';
 
 
 /**
  * displaying the main options
  */
-$('#head').html('Pick a Service');
+$('#head').html('<h1>Pick a Service</h1>');
 $('#display').html(main_options);
+$('#book-now').html('');
 
 /***
 * Click listener for the initial radio button UI. The termination of the UI will result in the cost
@@ -220,12 +217,7 @@ $('input[name=service]').click(function() {
 				
 	}
 
-	//Can be regular (cost = 45, time = 45) or spa (cost = 60, time = 60).
-	else if(service == 'Pedicure'){
-		time = 45;
-		console.log(time);
 
-	}
 }); 
 //EO main options
 
@@ -246,18 +238,37 @@ $('#select-service').click(function() {
 });
 
 function displayTotal(){
-    //checking to see if add on variable has been set if so will display
 
-    $('#main-service').html( service + ': ' + cost + '<br>');
+    $('#main-service').html( service + ': <span> $' + cost + '</span>' );
 
+
+    //checking if valid because keep null from displaying
     if(extra_selected == true){
-     $('#extras').html( 'Extras Selected: ');
+
+        $('#display').html('');
+        $('#head').html('<h1>Services Selected</h1>');
+        $('#info').html('Here is a estimate for your next appointment. Click on Book-It to schedule it.');
+        $('#book-now').html('<button type="button" id = "book">Book-It</button>');
 
 
+                //step through extras and display total
+        for (var i=0; i<extras.length; i++){
+
+            $('#extras').append( '<p>' + extras_name[Math.floor(extras[i])] + ':<span> $' + extras_cost[Math.floor(extras[i])] + '</span></p>');
+
+            time = time + extras_time[Math.floor(extras[i])];
+            cost = cost + extras_cost[Math.floor(extras[i])];
+
+        }
+
+        $('#sub-total').html( 'Service + Extras: ' + ' <span> $' + cost + '</span>' +'<br>');
     }
 
 
-    $('#time').html( 'Time needed' + ': ' + time + ' minutes' + '<br>');
+
+
+    $('#time').html( '<br>Time needed' + ': <span>' + time + ' minutes </span><br><br>' );
+   bookNow()
 
 }
 
@@ -268,8 +279,15 @@ function displayTotal(){
 function addOn(){
 
 
-    $('#head').html('Pick Extras');
+    $('#head').html('<h1>Pick Extras</h1>');
+    $('#info').html('Select an extra service or select none and continue.');
     $('#display').html(add_on_checkbox);
+
+
+}
+
+function bookNow(){
+
 
 
 }
@@ -314,8 +332,11 @@ function checkboxes(){
     for (var i=0; i<checkedBoxes.length; i++)
     {
         var box = Math.floor($(checkedBoxes[i]).val());
-        if(box == 1){
+        if(box == 0){
 
+            extras[i] = box;
+        }
+        else if(box == 1){
             extras[i] = box;
         }
         else if(box == 2){
@@ -324,12 +345,9 @@ function checkboxes(){
         else if(box == 3){
             extras[i] = box;
         }
-        else if(box == 4){
-            extras[i] = box;
-        }
+
+        extra_selected = true;
+
     }
 
-    for(var i =0; i< extras.length; i++ ){
-        console.log(extras[i]);
-    }
 }
