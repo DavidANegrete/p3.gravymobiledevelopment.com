@@ -9,24 +9,12 @@
     var label;
     var extra_selected = false;
     var service;
-
     var extras = new Array();
-
-
-
-
-
-
 
 //declaring prices/time of extra services
     var extras_name = new Array("Parafin Wax Treatment","Massage","Nail Art", "None");
     var extras_cost = new Array(10,10,10,0);
     var extras_time = new Array(10,10,20,0);
-
-
-
-
-
 
 /***
  * Inner clusters of radio buttons.
@@ -50,8 +38,6 @@
                                         <!-- adding a div to add content  -->
                                         '<div class="options" id="manicure-options"></div><br>';
 
-
-
 	var extensions_fills_sub    =   '<input type="radio" class="service-type" name="service-type" id="acrylic" value = "1">'+
                                     '<label for="acrylic">Acrylic</label>'+
                                     '<input type="radio" class="service-type" name="service-type" id="gel" value = "2">' +
@@ -71,15 +57,13 @@
                                     '<input type="checkbox" class = "add-on" name="add-on" id = "none" value="3">'+
                                     '<label for="none">None</label><br><br>';
 
-
 /***
  * displaying the main options
  ***/
+
 $('#head').html('<h1>Pick a Service</h1>');
 $('#display').html(main_options);
 $('#book-now').html('');
-//
-
 
 /***
 * Click listener for the initial radio button UI. The termination of the UI will result in the cost
@@ -88,13 +72,11 @@ $('#book-now').html('');
 
 $('input[name=service]').click(function() {
 
-
 	//Get the label element that comes immediately after this radio button.
 	     label       =   $(this).next();
 	
 	//from the label element get the inner HTML 
 	    service     =    label.html();
-
 
     //condition to check for a match
 	if (service == 'Nail Extensions'){
@@ -134,7 +116,6 @@ $('input[name=service]').click(function() {
 
 	}
 
-
 	else if(service == 'Fills'){
 
         //this function hides the other labels and enables the corresponding menu
@@ -145,9 +126,6 @@ $('input[name=service]').click(function() {
 
         //from the label element get the inner HTML
         service     =   label.html();
-
-
-
 
         $('input[name=service-type]').click(function(){
 
@@ -178,7 +156,6 @@ $('input[name=service]').click(function() {
 
 	}
 
-
 	else if(service == 'Manicure'){
 
         //this function hides the other labels and enables the corresponding menu
@@ -189,7 +166,6 @@ $('input[name=service]').click(function() {
 
         //from the label element get the inner HTML
         service     =   label.html();
-
 
         $('input[name=service-type]').click(function(){
 
@@ -219,9 +195,6 @@ $('input[name=service]').click(function() {
 
 }); 
 //EO main options
-
-
-
 
 /***
  * Click listener for for the select button.
@@ -258,16 +231,12 @@ function displayTotal(){
         $('#head').html('<h1>Services Selected</h1>');
         $('#info').html('Here is an estimate for your next appointment. Click on Book-It to schedule it.');
 
-
-
          //step through extras and display total
         for (var i=0; i<extras.length; i++){
 
             $('#extras').append( '<p>' + extras_name[Math.floor(extras[i])] + ':<span> $' + extras_cost[Math.floor(extras[i])] + '</span></p>');
-
             time = time + extras_time[Math.floor(extras[i])];
             cost = cost + extras_cost[Math.floor(extras[i])];
-
         }
 
         $('#sub-total').html( 'Service + Extras: ' + ' <span> $' + cost + '</span>' +'<br>');
@@ -277,13 +246,7 @@ function displayTotal(){
         $('#book-it').prop("enabled", true);
     }
 
-
-
-
     $('#time').html( '<br>Time needed' + ': <span>' + time + ' minutes </span><br><br>' );
-
-
-
 }
 
 /***
@@ -296,7 +259,6 @@ function addOn(){
     $('#head').html('<h1>Pick Extras</h1>');
     $('#info').html('Select an extra service or select none and continue.');
     $('#display').html(add_on_checkbox);
-
 
 }
 
