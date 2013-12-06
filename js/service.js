@@ -51,9 +51,9 @@ var add_on_checkbox           =     '<input type="checkbox" class = "add-on" nam
                                     '<input type="checkbox" class = "add-on" name="add-on" id = "none" value="4">'+
                                     '<label for="none">None</label><br>';
 
-
+var checkedRadio;
 var label;
-var service;
+
 var main_selected = false;
 
 /*-------------------------------------------------------------------------------------------------
@@ -61,7 +61,8 @@ var main_selected = false;
  -------------------------------------------------------------------------------------------------*/
 $('#heading').html('<h1>Service Estimator</h1>');
 
-$('#options').html(main_options);
+$('#display').html(main_options);
+
 
 
 
@@ -77,7 +78,10 @@ $('#options').html(main_options);
  * and time values to be set, calculated and the calculate function to be called..
  ***/
 
+
+
 $('input[name=service]').click(function() {
+
 
     //Get the label element that comes immediately after this radio button.
     label       =   $(this).next();
@@ -85,13 +89,18 @@ $('input[name=service]').click(function() {
     //from the label element get the inner HTML
     service     =    label.html();
 
-      //Can be acrylic (cost = 50, time = 60) or gel (cost = 60, time = 60).
+    /*
+     If else block to check the buttons
+     */
+
+    //Can be acrylic (cost = 50, time = 60) or gel (cost = 60, time = 60).
+
+
+
+
     if (service == 'Nail Extensions'){
 
-        //showing additional options for Nail Extensions clear out other radio options
-        $('#fills-options').html('');
-        $('#manicure-options').html('');
-        $('#extensions-options').html(extensions_fills_sub);
+        displaySub(service);
 
         //next layer checking whether acrylic or gel was selected
 
@@ -107,7 +116,6 @@ $('input[name=service]').click(function() {
             if (service == 'Acrylic') {
                 cost    =   50;
                 time    =   60;
-                main_selected = true;
                 service = service + ' Extensions';
                 console.log('Acrylic Cost:' + cost);
             }
@@ -116,7 +124,6 @@ $('input[name=service]').click(function() {
             else if(service == 'Gel'){
                 cost    =   60;
                 time    =   60;
-                main_selected = true;
                 service = service + ' Extensions';
                 console.log('gel Cost:' + cost);
             }
@@ -134,10 +141,7 @@ $('input[name=service]').click(function() {
         //from the label element get the inner HTML
         service     =   label.html();
 
-        //showing additional options for Nail Extensions clear out other radio options
-        $('#extensions-options').html('');
-        $('#manicure-options').html('');
-        $('#fills-options').html(extensions_fills_sub);
+        displaySub(service);
 
 
         $('input[name=service-type]').click(function(){
@@ -152,7 +156,6 @@ $('input[name=service]').click(function() {
             if (service == 'Acrylic') {
                 cost    =   35;
                 time    =   50;
-                main_selected = true;
                 service = service + ' Fills';
             }
 
@@ -160,7 +163,6 @@ $('input[name=service]').click(function() {
             else if(service == 'Gel'){
                 cost    =   45;
                 time    =   50;
-                main_selected = true;
                 service = service + ' Fills';
             }
 
@@ -179,10 +181,7 @@ $('input[name=service]').click(function() {
         //from the label element get the inner HTML
         service     =   label.html();
 
-        //showing additional options for Manicures. Clearing out other radio options
-        $('#extensions-options').html('');
-        $('#fills-options').html('');
-        $('#manicure-options').html(manicure_sub)
+        displaySub(service);
 
         $('input[name=service-type]').click(function(){
 
@@ -196,7 +195,6 @@ $('input[name=service]').click(function() {
             if (service == 'Regular Polish') {
                 cost    =   25;
                 time    =   30;
-                main_selected = true;
                 service = service + ' Manicure';
             }
 
@@ -204,7 +202,6 @@ $('input[name=service]').click(function() {
             else if(service == 'Gel Polish'){
                 cost    =   35;
                 time    =   45;
-                $('#options').html(add_on_checkbox);
                 service = service + ' Manicure';
             }
 
@@ -213,55 +210,67 @@ $('input[name=service]').click(function() {
     }
 
 
-    if(main_selected == true){
-        $('#options').html(add_on_checkbox);
 
 
-    }
+
+
 });
 //EO main options
 
 
 
-//$('input[name=service-type]').click(calculate);
-//$('input,select').change(calculate);
+//using a single function to display diffrent subs for the main menus,
+function displaySub(submenu){
 
+    if (submenu == 'Nail Extensions'){
+        $('#extensions-options').html(extensions_fills_sub);
+        $('#fills-options').html('');
+        $('#manicure-options').html('');
+    }
+    else if(submenu == 'Fills'){
+        $('#extensions-options').html('');
+        $('#fills-options').html(extensions_fills_sub);
+        $('#manicure-options').html('');
+    }
 
+    else if(submenu == 'Manicure'){
+        $('#extensions-options').html('');
+        $('#fills-options').html('');
+        $('#manicure-options').html(manicure_sub)
 
-
-
-/*-------------------------------------------------------------------------------------------------
-
- -------------------------------------------------------------------------------------------------*/
-function calculate() {
-
-    var budget   = $('#budget').val();
-    var rooms    = $('#room_count').val();
-    var services = $('input[name=services]:checked');
-    var total    = 0;
-
-    services.each(function() {
-
-        var price = $(this).val();
-
-        var amount = price * rooms;
-
-        total = total + amount;
-
-    }); // end of loop
-
-    $('#output').html(total);
+    }
 
 }
 
-function radio_picker(){
+
+
+function checkRad(){
+    checkedRadio = $('input[name=service]:checked');
+
+
+      value =   checkedRadio.val();
+}
+
+//Button used to check radio
+
+$('#selected-service').click(function() {
+
+    checkRad();
+
+
+});
+
+function getLabel() {
+
+
     //Get the label element that comes immediately after this radio button.
     label       =   $(this).next();
 
     //from the label element get the inner HTML
     service     =    label.html();
 
-}
+    return service;
 
+}
 
 
