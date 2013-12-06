@@ -243,7 +243,7 @@ function displayTotal(){
 
         //adding control to keep users from entering submit twice
         $('#select-service').prop("disabled", true);
-        $('#book-it').prop("enabled", true);
+        $('#book-it').prop("disabled", false);
     }
 
     $('#time').html( '<br>Time needed' + ': <span>' + time + ' minutes </span><br><br>' );
@@ -329,7 +329,7 @@ function displaySub(submenu){
 
 //Eventually I will add athe abitlity for this to be booked using a db.
 $('#book-it').click(function() {
-    $('#info').html('Your appointment is booked');
+    $('#info').html('Your appointment is booked!');
     console.log('test');
 
 });

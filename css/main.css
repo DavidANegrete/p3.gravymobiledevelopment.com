@@ -30,16 +30,25 @@ Layout
 #head {
     width: 100%;
     font-weight: bold;
-    background-color: lavender;
+    background-color: #fae624;
     text-align: center;
 
 }
 
 #results{
     border: 1px solid #050403;
+    background-color: #4FB69F;
+
+}
+span {
+    font-weight: bold;
+}
+#main-service, #extras, #sub-total, #time {
+    font-size: 25px;
 
 
 }
+
 
 #sub-head {
     font-weight: bold;
